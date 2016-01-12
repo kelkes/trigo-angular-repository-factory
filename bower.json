@@ -1,0 +1,20 @@
+{
+	"name": "trigo-angular-repository-factory",
+	"version": "1.0.0",
+	"homepage": "https://github.com/kelkes/trigo-angular-repository-factory",
+	"authors": [
+    "David Wippel <david@trigo.at>"
+  ],
+	"main": "index.js",
+	"license": "MIT",
+	"ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+	"dependencies": {
+		"lodash": "~3.10.1"
+	}
+}
