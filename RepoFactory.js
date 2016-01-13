@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 
-function BaseRepoFactory($http, $log) {
+function RepoFactory($http, $log) {
 	var BaseRepo = function(urlPrefix, Model) {
 		this.urlPrefix = urlPrefix;
 		this.Model = Model;
@@ -91,4 +91,4 @@ function BaseRepoFactory($http, $log) {
 	return BaseRepo;
 }
 
-module.exports = BaseRepoFactory;
+module.exports = RepoFactory;
