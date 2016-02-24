@@ -1,6 +1,6 @@
 {
 	"name": "angular-repository-factory",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"homepage": "https://github.com/trigo-at/angular-repository-factory.git",
 	"authors": [
     "David Wippel <david@trigo.at>"
@@ -15,6 +15,6 @@
     "tests"
   ],
 	"dependencies": {
-		"lodash": "^4.0.1"
+		"lodash": "^4.5.1"
 	}
 }

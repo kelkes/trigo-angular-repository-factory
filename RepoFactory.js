@@ -21,7 +21,7 @@ function RepoFactory($http, $log) {
 			url = url + '?' + q;
 		}
 
-		var request = (that.isPostSearch) ? $http.post(url, options) : $http.get(url);
+		var request = (that.isPostSearch) ? $http.post(url + '/search', options) : $http.get(url);
 		return request
 			.then(function(response) {
 				$log.debug(that.urlPrefix + '.find=' + response.status, response.data);
