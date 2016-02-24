@@ -15,7 +15,7 @@ function RepoFactory($http, $log) {
 		if (options) {
 			var keys = _.keys(options);
 			var q = _.map(keys, function(key) {
-				return key + '=' + encodeURIComponent(options[key]);
+				return key + '=' + JSON.stringify(options[key]);
 			}).join('&');
 			url = url + '?' + q;
 		}
