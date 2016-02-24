@@ -82,12 +82,16 @@
 	"disallowMixedSpacesAndTabs": true,
 	"disallowTrailingWhitespace": true,
 	"disallowTrailingComma": true,
+	"disallowMultipleVarDecl": false,
+	"requireTrailingComma": false,
 	"maximumLineLength": 240,
 	"requireCapitalizedConstructors": true,
 	"requireDotNotation": true,
 	"disallowYodaConditions": true,
 	"requireSpaceAfterLineComment": true,
 	"disallowNewlineBeforeBlockStatements": true,
+	"requirePaddingNewLinesBeforeLineComments": false,
+	"requirePaddingNewLinesAfterBlocks": false,
 	"validateQuoteMarks": {
 		"mark": "'",
 		"escape": true

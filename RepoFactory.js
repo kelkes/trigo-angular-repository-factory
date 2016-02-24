@@ -13,15 +13,15 @@ function RepoFactory($http, $log) {
 		var that = this,
 			url = 'api/' + that.urlPrefix;
 
-		if (options && !isPostSearch) {
+		if (options && !that.isPostSearch) {
 			var keys = _.keys(options);
 			var q = _.map(keys, function(key) {
-				return key + '=' + JSON.stringify(options[key]);
+				return key + '=' + encodeURIComponent(options[key]);
 			}).join('&');
 			url = url + '?' + q;
 		}
 
-		var request = (isPostSearch) ? $http.post(url, options) : $http.get(url);
+		var request = (that.isPostSearch) ? $http.post(url, options) : $http.get(url);
 		return request
 			.then(function(response) {
 				$log.debug(that.urlPrefix + '.find=' + response.status, response.data);
