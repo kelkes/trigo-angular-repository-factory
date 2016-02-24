@@ -3,16 +3,17 @@
 var _ = require('lodash');
 
 function RepoFactory($http, $log) {
-	var BaseRepo = function(urlPrefix, Model) {
+	var BaseRepo = function(urlPrefix, Model, isPostSearch) {
 		this.urlPrefix = urlPrefix;
 		this.Model = Model;
+		this.isPostSearch = isPostSearch;
 	};
 
 	BaseRepo.prototype.find = function(options) {
 		var that = this,
 			url = 'api/' + that.urlPrefix;
 
-		if (options) {
+		if (options && !isPostSearch) {
 			var keys = _.keys(options);
 			var q = _.map(keys, function(key) {
 				return key + '=' + JSON.stringify(options[key]);
@@ -20,7 +21,8 @@ function RepoFactory($http, $log) {
 			url = url + '?' + q;
 		}
 
-		return $http.get(url)
+		var request = (isPostSearch) ? $http.post(url, options) : $http.get(url);
+		return request
 			.then(function(response) {
 				$log.debug(that.urlPrefix + '.find=' + response.status, response.data);
 				var items = _.map(response.data.items, function(i) {
