@@ -1,6 +1,6 @@
 {
   "name": "@trigo/angular-repository-factory",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Base Repository Factory for AngularJS",
   "main": "index.js",
   "scripts": {
