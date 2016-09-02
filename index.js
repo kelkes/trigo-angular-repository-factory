@@ -1,3 +1,3 @@
-angular.module('trigo.angular.repositoryFactory', []);
+require('./lib');
 
-angular.module('trigo.angular.repositoryFactory').factory('RepoFactory', ['$http', '$log', require('./RepoFactory')]);
+module.exports = 'trigo.angular.repositoryFactory';
